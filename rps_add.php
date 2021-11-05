@@ -1,5 +1,10 @@
 <?php
 
+// Origin null is not allowed by Access-Control-Allow-Origin.とかのエラー回避の為、ヘッダー付与
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Content-Type");
+
+
 include("functions.php");
 
 $pdo = connect_to_db();
@@ -79,12 +84,3 @@ if ($status == false) {
 }
 
 }
-
-
-
-
-// // Origin null is not allowed by Access-Control-Allow-Origin.とかのエラー回避の為、ヘッダー付与
-// header("Access-Control-Allow-Origin: *");
-
-// // JSONを返す
-// echo json_encode($result, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
