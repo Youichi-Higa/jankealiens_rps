@@ -46,7 +46,7 @@ if ($status == false) {
   $result = $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-var_dump($result);
+// var_dump($result);
 
 // DBにデータがなければデータを新規作成、データがあればそのデータを更新
 if ($result == false) {
@@ -61,7 +61,7 @@ if ($status == false) {
   echo json_encode(["error_msg　データ新規作成エラー" => "{$error[2]}"]);
   exit();
 } else {
-  echo "データ新規作成成功";
+  // echo "データ新規作成成功";
   exit();
 }
 
@@ -79,7 +79,7 @@ if ($status == false) {
   echo json_encode(["error_msg　データ更新エラー" => "{$error[2]}"]);
   exit();
 } else {
-  echo "データ更新成功";
+  // echo "データ更新成功";
   exit();
 }
 
